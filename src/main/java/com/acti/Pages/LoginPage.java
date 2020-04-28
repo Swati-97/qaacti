@@ -10,7 +10,7 @@ import com.acti.Base.DriverScript;
  * Tester: Swati
  * Verified By: Swati
  * Date Created: 4/27/2020
- * LAst Modified: 4/27/2020
+ * Last Modified: 4/27/2020
  */
 
 //in loginpage.jave script this r just supporting class. all the validation will be in test cases
@@ -27,12 +27,12 @@ public class LoginPage extends DriverScript{
     
 //*************************************** page Initialization*************************************
 // now write down constructor. using the constructor we have to initialize the element
+//PageFactory is the class in POM which is to initialize the page elements of the class (the top 4 lines under page element actilogo, username, passwordtb,loginbtn)
   public LoginPage()
   {
 	PageFactory.initElements(driver, LoginPage.class);
 	//PageFactory.initElements(driver, this);
 	//what is the keyword to represent the current class global variables?"This" instead of LoginPage.class we can use This.
-	//PageFactory is the class in POM which is to initialize the page elements of the class (the top 4 lines under page element actilogo, username, passwordtb,loginbtn)
 	// create class LoginPAge for pagefactory  
   }
    
