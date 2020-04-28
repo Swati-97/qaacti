@@ -1,5 +1,6 @@
 package com.acti.Testcase;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -16,6 +17,8 @@ import com.acti.Pages.LoginPage;
 
 public class LoginPageTest extends DriverScript{
 
+	LoginPage lp;
+	
 	public LoginPageTest()
 	{
 		//Super keyword is used to call the parent class constructor
@@ -26,7 +29,8 @@ public class LoginPageTest extends DriverScript{
 	@BeforeMethod
 	public void preTest()
 	{
-		initApp();   // method we have written in driver script we r calling here by initApp
+		initApp(); // method we have written in driver script we r calling here by initApp
+		lp = new LoginPage();
 	}
 	@AfterMethod
 	public void postTest()
@@ -37,22 +41,24 @@ public class LoginPageTest extends DriverScript{
 	public void testVerifyActiLogo()
 	{
 		//instead of creating global object LoginPAge lp we could have create in hear too
-		LoginPage lp=new LoginPage();
 		boolean flag = lp.verifyActiLogo();
-		System.out.println(flag);
-	}
+		Assert.assertTrue(flag);
+		}
 	@Test(priority=2)
 	public void testLoginPageTitle()
 	{
-		LoginPage lp = new LoginPage();
 		String title = lp.verifyLoginPageTitle();
-		System.out.println(title);
+		Assert.assertEquals("actiTime - Login", title);
 	}
 	@Test(priority=3)
 	public void testValidateLoginFunction()
 	{
-		LoginPage lp = new LoginPage();
 		lp.validateLogin("admin", "manager");
+	}
+	@Test(priority=4)
+	public void testValidateLoginFunction1()
+	{
+		lp.validateLogin(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	
 	
