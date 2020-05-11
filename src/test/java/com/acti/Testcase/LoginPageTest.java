@@ -15,9 +15,9 @@ import com.acti.Pages.LoginPage;
  * Last Modified: 4/27/2020
  */
 
-public class LoginPageTest extends DriverScript{
+public class LoginPageTest extends /*DriverScript*/ BaseTest{
 
-	LoginPage lp;
+	/*LoginPage lp;
 	
 	public LoginPageTest()
 	{
@@ -36,7 +36,7 @@ public class LoginPageTest extends DriverScript{
 	public void postTest()
 	{
 		driver.close();
-	}
+	}*/
 	@Test(priority=1)   // this is actual test case
 	public void testVerifyActiLogo()
 	{

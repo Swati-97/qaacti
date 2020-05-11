@@ -3,15 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.acti.Testcase.LoginPageTest">
+      <class name="com.acti.Testcase.TestCreateCustomer">
         <methods>
-          <include name="postTest"/>
+          <include name="testCreateCustomer"/>
           <include name="preTest"/>
-          <include name="testValidateLoginFunction"/>
-          <include name="testLoginPageTitle"/>
-          <include name="testVerifyActiLogo"/>
+          <include name="initApp"/>
         </methods>
-      </class> <!-- com.acti.Testcase.LoginPageTest -->
+      </class> <!-- com.acti.Testcase.TestCreateCustomer -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

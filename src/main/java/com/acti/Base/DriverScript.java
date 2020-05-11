@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 
 public class DriverScript {
 
@@ -35,7 +36,7 @@ public class DriverScript {
 	
 	//just do the unit test to check the code is correct in driver script
 	
-	//@Test ---- after you check the code is correct or not immediately you 
+	@Test //---- after you check the code is correct or not immediately you 
 	//delete this @test method and related testng import statement fort he top
 	
 	public static void initApp()
